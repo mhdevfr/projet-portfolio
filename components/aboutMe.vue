@@ -2,7 +2,7 @@
   <div class="w-3/4 h-2/3 rounded-2xl">
     <div class="flex items-start justify-normal flex-col p-10">
       <div class="flex">
-        <div class="mx-5 flex flex-col justify-center mr-10">
+        <div class="ml-10 flex flex-col justify-center mr-10">
           <h1 class="text-white text-4xl font-bold brico-800">
             About me.
           </h1>

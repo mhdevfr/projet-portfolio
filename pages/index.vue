@@ -7,20 +7,27 @@
       class="absolute left-0 right-0 top-[-10%] mt-32 z-0 h-[1000px] w-[1000px] rounded-full bg-[radial-gradient(circle_400px_at_50%_300px,#fbfbfb36,#000)]"
     ></div>
     <div class="flex flex-col items-center h-screen justify-center">
-        <navbar class="absolute z-10 top-0 rounded-xl text-gray-50 mt-12"/>
+      <navbar class="absolute z-10 top-0 rounded-xl text-gray-50 mt-12" />
       <heroTexte></heroTexte>
     </div>
-    <div class="h-screen w-full absolute z-30 flex justify-center items-center bg-black">
-        <aboutMe></aboutMe>
+    <div
+      class="h-screen w-full absolute z-30 flex justify-center items-center bg-black"
+    >
+      <div
+        class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_60%,#63e_100%)]"
+      ></div>
+      <aboutMe class="z-50"></aboutMe>
+      <parallaxParticles class="absolute z-10" />
     </div>
+    <div class="h-screen w-full flex justify-center items-center"></div>
   </div>
 </template>
 
-<script lang="ts">
-</script>
+<script lang="ts"></script>
 
 <style lang="css">
 @import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap");
+
 .brico-800 {
   font-family: "Bricolage Grotesque", sans-serif;
   font-optical-sizing: auto;
