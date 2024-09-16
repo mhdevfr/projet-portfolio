@@ -64,6 +64,6 @@
   
   <style lang="css">
   .parallax {
-    transition: transform 0.5s ease-out;
+    transition: transform 1s ease-out;
   }
   </style>

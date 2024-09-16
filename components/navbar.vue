@@ -15,7 +15,7 @@
             class="px-10 py-2 underline-offset-4 underline decoration-sky-500"
             >Home</nuxt-link
           >
-          <nuxt-link to="/plans" class="px-10 py-2">About me</nuxt-link>
+          <nuxt-link to="#about" class="px-10 py-2">About me</nuxt-link>
           <nuxt-link to="/contact" class="px-4 mx-4 py-2 bg-gray-100 text-black rounded-md">Contact</nuxt-link>
         </li>
       </ul>
