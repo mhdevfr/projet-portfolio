@@ -1,7 +1,12 @@
 <template>
-  <div class="flex items-center justify-center min-h-screen bg-gray-100" v-if="!autorisation">
+  <div
+    class="flex items-center justify-center min-h-screen bg-gray-100"
+    v-if="autorisation"
+  >
     <div class="bg-white p-8 rounded-lg shadow-lg max-w-sm w-full">
-      <h2 class="text-2xl font-semibold text-center mb-6">Accéder à mon portfolio</h2>
+      <h2 class="text-2xl font-semibold text-center mb-6">
+        Accéder à mon portfolio
+      </h2>
       <form @submit.prevent="checkPassword">
         <div class="mb-4">
           <label for="password" class="block text-gray-700">Mot de passe</label>
@@ -20,7 +25,9 @@
           Soumettre
         </button>
       </form>
-      <p v-if="errorMessage" class="text-red-500 mt-4 text-center">{{ errorMessage }}</p>
+      <p v-if="errorMessage" class="text-red-500 mt-4 text-center">
+        {{ errorMessage }}
+      </p>
     </div>
   </div>
   <div class="relative h-full w-full bg-black" v-else>
@@ -34,21 +41,9 @@
       <navbar class="absolute z-10 top-0 rounded-xl text-gray-50 mt-12" />
       <heroTexte></heroTexte>
     </div>
+    <projectList class="z-30 h-full w-full relative bg-black" />
     <div
-      class="h-screen w-full bg-black flex flex-col z-50 justify-center items-center"
-    >
-      <div class="h-1/3 w-5/6">
-          <img src="../assets/images/photolio.png" class="w-auto h-full p-4 rounded-lg" />
-      </div>
-      <div class="h-1/3 w-5/6 flex justify-center">
-          <img src="../assets/images/kaizen.png" class="w-auto p-4 h-full rounded-lg" />
-      </div>
-      <div class="h-1/3 w-5/6 flex justify-end">
-        <img src="../assets/images/photolio.png" class="w-auto h-full p-4 rounded-lg" />
-      </div>
-    </div>
-    <div
-      class="h-screen w-full absolute z-30 flex justify-center items-center bg-black"
+      class="h-screen w-full absolute z-50 flex justify-center items-center bg-black"
     >
       <div
         class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_60%,#63e_100%)]"
@@ -61,20 +56,20 @@
 </template>
 
 <script setup>
-const correctPassword = 'enzo' 
-let passwordInput = ref('')
-const errorMessage = ref('')
-const autorisation = ref(false)
+const correctPassword = "enzo";
+let passwordInput = ref("");
+const errorMessage = ref("");
+const autorisation = ref(false);
 const checkPassword = () => {
   if (passwordInput.value === correctPassword) {
-    autorisation.value = true
-    errorMessage.value = 'Vous êtes connecté'
+    autorisation.value = true;
+    errorMessage.value = "Vous êtes connecté";
   } else {
-    autorisation.value = false
-          console.log('autorisation', autorisation.value)
-    errorMessage.value = 'Mot de passe incorrect'
+    autorisation.value = false;
+    console.log("autorisation", autorisation.value);
+    errorMessage.value = "Mot de passe incorrect";
   }
-}
+};
 </script>
 
 <style lang="css">
