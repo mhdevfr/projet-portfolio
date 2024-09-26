@@ -56,7 +56,7 @@
 </template>
 
 <script setup>
-const correctPassword = "enzo";
+const correctPassword = "testpassword";
 let passwordInput = ref("");
 const errorMessage = ref("");
 const autorisation = ref(false);
